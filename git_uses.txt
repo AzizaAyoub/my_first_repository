@@ -1,0 +1,35 @@
+// Let's create a new directory called git_basics and add a few files to it.
+
+$ mkdir git_basics
+$ cd git_basics
+$ echo '# README #' > README.md
+$ echo '# LICENSE #' > LICENSE.md
+
+/*
+ These two commands, thus, create 2 files, README.md and LICENSE.md, each of which starts with a simple comment (# README #, # LICENSE #).
+The files above, README.md and LICENSE.md, are for demonstration purposes only, though they are included in the root directory of many open source projects.
+*/
+
+
+// GitHub uses main as the name of your primary branch
+// But git is still uses master default branch
+// The best way to accomplish this is to change your default branch name to main:
+ 
+$ git config --global init.defaultBranch main
+$ git add --move master main
+$ git branch -M main
+
+// with one of these commands you can change you default branch from master to the main.
+
+// We're now ready to create a local repository. On the command line, from within the git_basics directory, type the following:
+
+$ git init
+Initialized empty Git repository in .../git_basics/.git/
+
+/*
+The Initialized message means that git "initialized", or created, a new repository in your current directory.
+a .git directory was added to the git_basics directory. 
+*/
+
+
+
